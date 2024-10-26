@@ -1,0 +1,25 @@
+.carouselContainer {
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+  width: 100vw; /* Full width of the viewport */
+  height: 200px; /* Height of the carousel */
+  position: relative; /* Relative positioning for children */
+}
+
+.carousel {
+  display: flex; /* Flexbox for horizontal layout */
+  position: absolute; /* Position for animation */
+  top: 0; /* Align with top of wrapper */
+}
+
+.card {
+  width: 300px; /* Width of each card */
+  height: 100%; /* Full height of carousel */
+  margin: 0 10px; /* Margin between cards */
+  background-color: #3498db; /* Card background color */
+  color: white; /* Card text color */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  border-radius: 8px; /* Rounded corners */
+  flex-shrink: 0; /* Prevent shrinking */
+}
