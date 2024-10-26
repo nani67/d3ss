@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.card-css {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-top-right-radius: 60px;
+  border-top-left-radius: 60px;
+}
+
+
+
+
+
+.card {
+  background-color: #fff; /* Card background color */
+  border: 1px solid #ddd; /* Card border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: transform 0.2s; /* Transition for hover effect */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.title {
+  margin: 0 0 10px; /* Margin for title */
+  font-size: 1.5rem; /* Font size for title */
+}
+
+.content {
+  margin: 0; /* No margin for content */
+  font-size: 1rem; /* Font size for content */
+}
+
+/* styles/globals.css */
+@layer utilities {
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  .animate-infinite-scroll {
+    animation: infinite-scroll 5s linear infinite;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-container {
+  position: relative;
+}
+
+
+
+.glass_tint { /* Glass-like effect */
+  backdrop-filter: blur(10px); /* Tinted glass */
+}
+
+.golden {
+  color: #FFB000;
+}
