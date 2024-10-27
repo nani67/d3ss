@@ -20,27 +20,38 @@ import social_media_marketing from '../../assets/social_media_marketing.jpg';
 import website_development from '../../assets/website_development.png';
 import { noisyLinesBackground, swarmBackground } from 'threejs-toys';
 
+import Footer from '../footer/footer';
+
+import { Poppins } from 'next/font/google';
+
 import LogoCarousel from '../logocarousel/logocarousel';
 
+import gmail from '../../assets/social_media/gmail.png';
+import instagram from '../../assets/social_media/instagram.png';
+import linkedin from '../../assets/social_media/linkedin.png';
 
 
 import prakashai from '../../assets/companies/prakash_ai.png';
+import api_infotech from '../../assets/companies/api_infotech.png';
+import Link from 'next/link';
 
 const glacialIndifference = localFont({
     src: "../../fonts/GlacialIndifference.woff",
     variable: "--font-glacial-indifference",
 });
 
+const poppins = Poppins({ subsets: ['latin'], weight: '500' });
+
 
 const logos = [
-    {id:1 ,image:prakashai},
-    {id:2 ,image:seo},
-    {id:3 ,image:seo},
-    {id:4 ,image:seo},
-    {id:5 ,image:seo},
-    {id:6 ,image:seo},
+    { id: 1, image: prakashai },
+    { id: 2, image: seo },
+    { id: 3, image: seo },
+    { id: 4, image: seo },
+    { id: 5, image: seo },
+    { id: 6, image: seo },
     // Add as many logos as you need
-  ];
+];
 
 const cardData = [
     {
@@ -136,17 +147,14 @@ const Home = () => {
             <div className={``} style={{ backgroundColor: '#004225', position: 'relative' }}>
                 <div className='' style={{ backgroundColor: '#004225', }}>
                     <div className={` ${glacialIndifference.className} text-5xl font-bold golden`} style={{ paddingTop: '3rem', paddingLeft: '1.5rem' }}>Our Mission</div>
-                    
-                    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 justify-between">
-                    <div className={`text-xl col-span-2`} style={{ padding: '1.5rem', color: '#fff' }}>To provide companies with cutting-edge, scalable, and secure technological solutions that promote digital transformation, streamline processes, and promote future growth.</div>
-                    {/* <div className={`text-xl `} style={{ padding: '1.5rem', color: '#fff' }}>To provide companies with cutting-edge, scalable, and secure technological solutions that promote digital transformation, streamline processes, and promote future growth.</div> */}
-                    <div className='justify-self-end' style={{margin: '8px'}}>
-                    <Image className='text-right col-span-1' src={logo} alt='Cloud' style={{ width:'5rem', height:'5rem', objectFit: "contain", borderRadius: '8px' }} />
-                         
 
-                    </div>               
+                    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 justify-between">
+                        <div className={`text-xl col-span-2`} style={{ padding: '1.5rem', color: '#fff' }}>To provide companies with cutting-edge, scalable, and secure technological solutions that promote digital transformation, streamline processes, and promote future growth.</div>
+                        {/* <div className={`text-xl `} style={{ padding: '1.5rem', color: '#fff' }}>To provide companies with cutting-edge, scalable, and secure technological solutions that promote digital transformation, streamline processes, and promote future growth.</div> */}
+                        <div className='justify-self-end' style={{ margin: '8px' }}>
+                        </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div className={``} style={{ backgroundColor: '#004225', position: 'relative' }}>
@@ -167,40 +175,61 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className={`h-screen`} style={{ backgroundColor: '#FFCF9D', }}>
-                <div className='h-screen' style={{ backgroundColor: '#FFCF9D', }}>
+            <div className={``} style={{ backgroundColor: '#FFCF9D', }}>
+                <div className='' style={{ backgroundColor: '#FFCF9D', }}>
 
                     <div className={` ${glacialIndifference.className} text-5xl font-bold`} style={{ padding: '2rem', color: '#004225' }}>Latest details</div>
-                    
+
                     <div className="flex flex-col sm:flex-row justify-around gap-6 p-4">
-  
-  <div className="flex flex-col items-center bg-blue-100 p-6 rounded-lg shadow-md w-full sm:w-1/3">
-    <div className="text-4xl font-bold text-blue-600 mb-2">150+</div>
-    <div className="text-xl font-semibold text-gray-700">Projects Done</div>
-  </div>
 
-  <div className="flex flex-col items-center bg-green-100 p-6 rounded-lg shadow-md w-full sm:w-1/3">
-    <div className="text-4xl font-bold text-green-600 mb-2">98%</div>
-    <div className="text-xl font-semibold text-gray-700">Satisfied Customers</div>
-  </div>
+                        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/3">
+                            <div className={`${poppins.className} text-4xl font-bold text-blue-600 mb-2`}>4</div>
+                            <div className={`${poppins.className} text-xl font-semibold text-gray-700`}>Projects Done</div>
+                        </div>
 
-  <div className="flex flex-col items-center bg-yellow-100 p-6 rounded-lg shadow-md w-full sm:w-1/3">
-    <div className="text-4xl font-bold text-yellow-600 mb-2">4.8/5</div>
-    <div className="text-xl font-semibold text-gray-700">Average Ratings</div>
-  </div>
+                        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/3">
+                            <div className={`${poppins.className} text-4xl font-bold text-green-600 mb-2`}>95%</div>
+                            <div className={`${poppins.className} text-xl font-semibold text-gray-700`}>Satisfied Customers</div>
+                        </div>
 
+                        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/3">
+                            <div className={`${poppins.className} text-4xl font-bold text-yellow-600 mb-2`}>4.5/5</div>
+                            <div className={`${poppins.className} text-xl font-semibold text-gray-700`}>Average Ratings</div>
+                        </div>
+
+                    </div>
+
+                    <div className={` ${glacialIndifference.className} text-5xl font-bold`} style={{ padding: '2rem', color: '#004225' }}>Notable Clients</div>
+
+                    <div className="flex flex-col sm:flex-row justify-around gap-6 p-4">
+
+                        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/2">
+                            <Image src={prakashai} width={200} height={200} alt='Prakash AI'></Image>
+                            <div className={`${poppins.className} text-xl font-semibold text-gray-700`}>Prakash.ai</div>
+                        </div>
+
+                        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/2">
+                            <Image src={api_infotech} width={200} height={200} alt='Prakash AI'></Image>
+                            <div className={`${poppins.className} text-xl font-semibold text-gray-700`}>API Infotech</div>
+                        </div>
+
+                        {/* <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/4">
+<Image src={prakashai} width={200} height={200} alt='Prakash AI'></Image>
+    <div className={`${poppins.className} text-xl font-semibold text-gray-700`}>Average Ratings</div>
 </div>
 
-<div className={` ${glacialIndifference.className} text-5xl font-bold`} style={{ padding: '2rem', color: '#004225' }}>Contact us</div>
-<div className={` ${glacialIndifference.className} text-3xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Penumala Nani</div>
-<div className={` ${glacialIndifference.className} text-3xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Email ID: <a href='mailto:d3softsol@gmail.com'>d3softsol@gmail.com</a></div>
-<div className={` ${glacialIndifference.className} text-3xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Phone Number: +918801853078</div>
-<div className={` ${glacialIndifference.className} text-3xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Location: H-No: 24-570, Ranga Reddy Nagar, opp IDPL Colony, Hyderabad - 500037</div>
+<div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/4">
+<Image src={prakashai} width={200} height={200} alt='Prakash AI'></Image>
+    <div className={`${poppins.className} text-xl font-semibold text-gray-700`}>Average Ratings</div>
+</div> */}
 
-                
-{/* <div className={` ${glacialIndifference.className} text-5xl font-bold`} style={{ padding: '2rem', color: '#004225' }}>Clients</div> */}
+                    </div>
 
-{/* <div className="overflow-hidden w-full bg-gray-100 py-4" style={{ backgroundColor: '#FFFFFF00'}}>
+
+
+                    {/* <div className={` ${glacialIndifference.className} text-5xl font-bold`} style={{ padding: '2rem', color: '#004225' }}>Clients</div> */}
+
+                    {/* <div className="overflow-hidden w-full bg-gray-100 py-4" style={{ backgroundColor: '#FFFFFF00'}}>
       <div className="flex animate-scroll space-x-8">
         {[...logos].map((logo) => (
           <div key={logo.id} className="flex-shrink-0">
@@ -210,18 +239,75 @@ const Home = () => {
       </div>
     </div> */}
 
-    {/* <LogoCarousel /> */}
+                    {/* <LogoCarousel /> */}
 
                     {/* <div>Testimonials</div> */}
                 </div>
 
             </div>
-            {/* <div className={` h-screen`} style={{ borderRadius: '0px', backgroundColor: '#173B45' }}>
-                <div className='h-screen' style={{ backgroundColor: '#173B45' }}>
-                    Footer (Use a pro company footer for inspo)
+            <div className={``} style={{ borderRadius: '0px', backgroundColor: '#0B2545' }}>
+                <div className='' style={{ backgroundColor: '#0B2545' }}>
+                    <div className={` ${glacialIndifference.className} text-5xl font-bold golden text-center`} style={{ padding: '2rem' }}>Contact us</div>
+
+                    <div className='justify-center flex'>
+                        <div className="bg-white shadow-md rounded-lg p-8 " style={{ width: 'max-content' }}>
+                            <div className={` ${glacialIndifference.className} text-3xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Email ID: <a href='mailto:info@d3softwaresolutions.in' style={{ fontWeight: '600' }}>info@d3softwaresolutions.in </a></div>
+                            <div className={` ${glacialIndifference.className} text-3xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Phone Number: +918801853078</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='justify-center flex'>
+
+                    <div style={{ border: '1px solid #FFF', width: '75vw', margin: '12px', marginTop: '36px' }} className=''></div>
+
+                </div>
+                {/**<a href="https://www.flaticon.com/free-icons/gmail" title="gmail icons">Gmail icons created by Freepik - Flaticon</a> */}
+                {/**<a href="https://www.flaticon.com/free-icons/instagram-logo" title="instagram logo icons">Instagram logo icons created by Laisa Islam Ani - Flaticon</a> */}
+                {/**<a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Freepik - Flaticon</a> */}
+                <div className={` ${glacialIndifference.className} text-5xl font-bold golden text-center`} style={{ padding: '2rem' }}>Connect with us at </div>
+
+
+                <div className='justify-center flex'>
+                    <div className="bg-white shadow-md rounded-lg p-6 justify-center flex mb-10" style={{ width: 'max-content' }}>
+                        <div className='p-4'>
+                            <Link href='https://www.instagram.com/d3softwaresolutions/' target='_blank'>
+                                <Image src={instagram} width={30} height={30} alt='Instagram' ></Image>
+                            </Link>
+                        </div>
+                        <div className='p-4'>
+                            <Link href='https://www.linkedin.com/company/d3softwaresolutions/' target='_blank'>
+                                <Image src={linkedin} width={30} height={30} alt='LinkedIn' ></Image>
+                            </Link>
+                        </div>
+                        <div className='p-4'>
+                            <Link href='mailto:d3softsol@gmail.com' target='_blank'>
+                                <Image src={gmail} width={30} height={30} alt='Gmail' ></Image>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+            {/* <div className={``} style={{ borderRadius: '0px', backgroundColor: '#000000' }}>
+                <div className='' style={{ backgroundColor: '#000000', color: '#FFF' }}>
+                    Copyright © 2024 D3 Software Solutions
                 </div>
             </div> */}
+
+
+            
+      <Footer />
         </div>
+
 
     );
 }

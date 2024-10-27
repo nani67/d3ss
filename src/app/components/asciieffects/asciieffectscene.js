@@ -82,7 +82,7 @@ const AsciiEffectScene = () => {
     };
   }, []);
 
-  return <div ref={effectRef} style={{ width: '100vw', height: '100vh' }} />;
+  return <div ref={effectRef} style={{ width: '100px', height: '100px' }} />;
 };
 
 export default AsciiEffectScene;

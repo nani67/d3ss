@@ -4,6 +4,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Header from './components/header/header';
 import Home from './components/home/home';
+import Footer from './components/footer/footer';
 import rotating_globe from './assets/rotating_globe.mp4';
 
 
@@ -13,6 +14,8 @@ const HomePage = () => {
     <div className="bg-[#FFFFFF]">
       <Header />
       <Home />
+      {/* <div className='text-6xl'>Hello checking</div>
+      <Footer /> */}
 
     </div>
   );
