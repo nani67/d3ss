@@ -12,6 +12,10 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+export const metadata = {
+  title: 'D3 Software Solutions',
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
