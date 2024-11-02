@@ -39,7 +39,7 @@ const Header = () => {
           </span>
         </Link>
       </div>
-      <button onClick={toggleMenu} className={styles.hamburger} style={{ color: '#fff'}}>
+      {/* <button onClick={toggleMenu} className={styles.hamburger} style={{ color: '#fff'}}>
         ☰
       </button>
       <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
@@ -52,7 +52,7 @@ const Header = () => {
             <button>Get Started</button>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
   );
 };

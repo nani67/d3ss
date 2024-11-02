@@ -2,9 +2,8 @@
 
 'use client';
 
-import rotating_top from '../../assets/rotating_top.mp4';
-import rotating_bottom from '../../assets/rotating_bottom.mp4';
 import logo from '../../assets/logo.png';
+import motto from '../../assets/motto.png';
 import Image from 'next/image';
 import localFont from 'next/font/local';
 import { useEffect } from 'react';
@@ -33,6 +32,7 @@ import linkedin from '../../assets/social_media/linkedin.png';
 
 import prakashai from '../../assets/companies/prakash_ai.png';
 import api_infotech from '../../assets/companies/api_infotech.png';
+import champaran from '../../assets/companies/champaran.png';
 import Link from 'next/link';
 
 const glacialIndifference = localFont({
@@ -145,17 +145,35 @@ const Home = () => {
                 </div>
             </div>
             <div className={``} style={{ backgroundColor: '#004225', position: 'relative' }}>
-                <div className='' style={{ backgroundColor: '#004225', }}>
+                
+
+
+
+
+
+
+
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 p-4">
+      <div className="lg:col-span-4 md:col-span-2 col-span-1 p-4 text-white">
+      <div className='' style={{ backgroundColor: '#004225', }}>
                     <div className={` ${glacialIndifference.className} text-5xl font-bold golden`} style={{ paddingTop: '3rem', paddingLeft: '1.5rem' }}>Our Mission</div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 justify-between">
-                        <div className={`text-xl col-span-2`} style={{ padding: '1.5rem', color: '#fff' }}>To provide companies with cutting-edge, scalable, and secure technological solutions that promote digital transformation, streamline processes, and promote future growth.</div>
+                        <div className={`text-xl`} style={{ padding: '1.5rem', color: '#fff' }}>To provide companies with cutting-edge, scalable, and secure technological solutions that promote digital transformation, streamline processes, and promote future growth.</div>
                         {/* <div className={`text-xl `} style={{ padding: '1.5rem', color: '#fff' }}>To provide companies with cutting-edge, scalable, and secure technological solutions that promote digital transformation, streamline processes, and promote future growth.</div> */}
                         <div className='justify-self-end' style={{ margin: '8px' }}>
                         </div>
-                    </div>
 
                 </div>
+      </div>
+
+      <div className="lg:col-span-2 md:col-span-1 col-span-1 p-4  flex items-center justify-center">
+                                        <Image src={motto} width={200} height={200} alt='Cloud' style={{ objectFit: "contain" }} />
+                                        
+      </div>
+    </div>
+
+
+
             </div>
             <div className={``} style={{ backgroundColor: '#004225', position: 'relative' }}>
                 <div className='' style={{ backgroundColor: '#004225', }}>
@@ -165,8 +183,8 @@ const Home = () => {
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                                 {cardData.map((card) => (
                                     <div key={card.id} className="bg-white shadow-md rounded-lg p-8">
-                                        <Image src={card.image} width={300} height={300} alt='Cloud' style={{ objectFit: "contain", borderRadius: '8px' }} />
-                                        <h3 className="text-xl font-bold mb-2">{card.title}</h3>
+                                        <Image src={card.image} width={200} height={200} alt='Cloud' style={{ objectFit: "contain", borderRadius: '8px' }} />
+                                        <h3 className="text-xl font-bold mb-2 mt-4">{card.title}</h3>
                                         <p className="text-gray-700">{card.content}</p>
                                     </div>
                                 ))}
@@ -204,13 +222,20 @@ const Home = () => {
                     <div className="flex flex-col sm:flex-row justify-around gap-6 p-4">
 
                         <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/2">
-                            <Image src={prakashai} width={200} height={200} alt='Prakash AI'></Image>
+                            <Image src={prakashai} width={200} height={200} alt='Prakash AI' style={{borderRadius: '4px'}}></Image>
                             <div className={`${poppins.className} text-xl font-semibold text-gray-700`}>Prakash.ai</div>
                         </div>
 
                         <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/2">
-                            <Image src={api_infotech} width={200} height={200} alt='Prakash AI'></Image>
+                            <Image src={api_infotech} width={200} height={200} alt='API Infotech' style={{borderRadius: '4px'}}></Image>
                             <div className={`${poppins.className} text-xl font-semibold text-gray-700`}>API Infotech</div>
+                        </div>
+
+
+                        
+                        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/2">
+                            <Image src={champaran} width={200} height={200} alt='Champaran' style={{borderRadius: '4px'}}></Image>
+                            <div className={`${poppins.className} text-xl font-semibold text-gray-700`}>Champaran Marriage Bhavan</div>
                         </div>
 
                         {/* <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/4">
@@ -251,8 +276,8 @@ const Home = () => {
 
                     <div className='justify-center flex'>
                         <div className="bg-white shadow-md rounded-lg p-8 " style={{ width: 'max-content' }}>
-                            <div className={` ${glacialIndifference.className} text-3xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Email ID: <a href='mailto:info@d3softwaresolutions.in' style={{ fontWeight: '600' }}>info@d3softwaresolutions.in </a></div>
-                            <div className={` ${glacialIndifference.className} text-3xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Phone Number: +918801853078</div>
+                            <div className={` ${glacialIndifference.className} text-2xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Email ID: <a href='mailto:info@d3softwaresolutions.in' style={{ fontWeight: '600' }}>info@d3softwaresolutions.in </a></div>
+                            <div className={` ${glacialIndifference.className} text-2xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Phone Number: +918801853078</div>
                         </div>
                     </div>
                 </div>
