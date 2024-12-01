@@ -276,8 +276,8 @@ const Home = () => {
 
                     <div className='justify-center flex'>
                         <div className="bg-white shadow-md rounded-lg p-8 " style={{ width: 'max-content' }}>
-                            <div className={` ${glacialIndifference.className} text-2xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Email ID: <a href='mailto:info@d3softwaresolutions.in' style={{ fontWeight: '600' }}>info@d3softwaresolutions.in </a></div>
-                            <div className={` ${glacialIndifference.className} text-2xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Phone Number: +918801853078</div>
+                            <div className={` ${glacialIndifference.className} text-xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Email ID: <a href='mailto:info@d3softwaresolutions.in' style={{ fontWeight: '600' }}>info@d3softwaresolutions.in </a></div>
+                            <div className={` ${glacialIndifference.className} text-xl `} style={{ paddingLeft: '2rem', color: '#000' }}>Phone Number: +918977603078</div>
                         </div>
                     </div>
                 </div>
