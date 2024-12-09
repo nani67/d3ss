@@ -57,7 +57,7 @@ export default function Footer() {
               <li>24-570, Ranga Reddy Nagar</li>
               <li>Hyderabad, Telangana, 500037</li>
               <li>Email: info@d3softwaresolutions.in</li>
-              <li>Phone: +91 8801853078</li>
+              <li>Phone: +918977603078</li>
             </ul>
           </div>
 
