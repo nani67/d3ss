@@ -221,10 +221,10 @@ const Home = () => {
 
                     <div className="flex flex-col sm:flex-row justify-around gap-6 p-4">
 
-                        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/2">
+                       {/* <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/2">
                             <Image src={prakashai} width={200} height={200} alt='Prakash AI' style={{borderRadius: '4px'}}></Image>
                             <div className={`${poppins.className} text-xl font-semibold text-gray-700`}>Prakash.ai</div>
-                        </div>
+                        </div> */}
 
                         <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full sm:w-1/2">
                             <Image src={api_infotech} width={200} height={200} alt='API Infotech' style={{borderRadius: '4px'}}></Image>
